@@ -1,0 +1,118 @@
+body {
+            font-family: "Baloo Da 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            background-color: #F0F0F0; 
+        }
+
+        .esquerda-container {
+            width: 40%; 
+            background-color: #F6F6F6;
+            padding: 50px;
+            box-shadow: 2 2 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        
+        }
+
+        .direita-container {
+            width: 60%;
+            background-image: url('./media/img1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .logo-login {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: none;
+        }
+        
+        h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .google-login button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #F6F6F6;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .separator {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .formulario label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .formulario input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        .formulario input[type="text"], .formulario input[type="password"] {
+            height: 40px;
+            border-radius: 5px;
+        }
+       
+        .form-options {
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #ECB922;
+            color: #3C3931;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Rodapé (Footer) */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #3C3931;
+            color: #F6F6F6;
+            padding: 10px 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .footer a, span {
+            color: #F6F6F6;
+            gap: 30px;
+            text-decoration: none;
+            margin-left: 15px;
+        }
