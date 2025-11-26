@@ -398,7 +398,20 @@ td button {
     justify-content: space-between;
 }
 
-.botaoContainer {
+#botaoNovaSolicitacao{
+    background-color: #ECB922; 
+    color: #3C3931;
+    border: 1px solid #3c393159;
+    border-radius: 3px;
+    padding: 10px;
+    height: 25px;
+}
+
+#botaoNovaSolicitacao:hover {
+    background-color: #f0f0f0;
+}
+
+.botaoContainer, .botaoContainerPreto {
     background-color: #ECB922; 
     color: #3C3931;
     border: 1px solid #3c393159;
@@ -407,6 +420,9 @@ td button {
     align-items: center;
     display: inline-flex;
     justify-content: center;
+
+    margin-bottom: 20px;
+    padding: 10%;
     height: 45px;
     padding: 10px ;
     cursor: pointer;
@@ -414,6 +430,13 @@ td button {
     gap: 20px;
 
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);}
+
+.botaoContainerPreto {
+    background-color: #3C3931; 
+    color: #f0f0f0;
+    height: fit-content;
+    width: 100%;
+}
 
 .modal {
     display: none;

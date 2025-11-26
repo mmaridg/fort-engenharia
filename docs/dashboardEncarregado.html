@@ -7,65 +7,42 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="stylesheet" href="dashboardEncarregado.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Krona+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
      
 <aside class="nav">
-    <nav class="menu">
+        <nav class="menu">
+            <img src="./media/logo-fort.png" alt="Logo Fort" id="menuLogo">
+            
+            <a href="#" class="menuItem ativo">
+                <span class="menuIcon"><img src="media/dashboard-hover.png" alt="Dashboard" width="20px"></span> Dashboard</a>
 
-        <img src="./imagens/logo.fortes.png" alt="Logo Fort" id="menuLogo">
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/nova-solicitacao.png" alt="Nova Solicitação" width="20px"></span> Nova Solicitação </a>
+            
+            <a href="./solicitarGestor.html" class="menuItem">
+                <span class="menuIcon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>Solicitações</a>
+
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>Relatórios</a>
         
-        <a href="#" class="menuItem ativo">
-            <span class="menuIcon"><i class="fa-solid fa-table-cells-large"></i></span>
-            Dashboard
-        </a>
-
-        <a href="#" class="menuItem">
-            <span class="menuIcon"><i class="fa-solid fa-file-circle-plus"></i></span>
-            Nova Solicitação
-        </a>
         
-        <a href="./solicitacoesGestor.html" class="menuItem">
-            <span class="menuIcon"><i class="fa-solid fa-users"></i></span>
-            Solicitações
-        </a>
-
-        <a href="#" class="menuItem">
-            <span class="menuIcon"><i class="fa-solid fa-file-lines"></i></span>
-            Relatórios
-        </a>
-
-        <div class="menuRodape">
+            <div class="menuRodape">
             <hr>
-
-            <a href="#" class="menuItem" id="perfil">
-                <span class="menuIcon"><i class="fa-solid fa-user"></i></span>
-                Encarregado
-            </a>
-
-            <a href="#" class="menuItem" id="configuracoes">
-                <span class="menuIcon"><i class="fa-solid fa-gear"></i></span>
-                Configurações
-            </a>
-
-            <a href="#" class="menuItem" id="ajuda">
-                <span class="menuIcon"><i class="fa-solid fa-circle-question"></i></span>
-                Ajuda
-            </a>
-        </div>
-    </nav>
-</aside>
+                <a href="#" class="menuItem" id="perfil"><span class="menuIcon"><img src="media/profile.png" alt="Encarregado Perfil" width="20px"></span>Encarregado</a>
+                <a href="#" class="menuItem" id="configuracoes"><span class="menuIcon"><img src="media/configuracoes.png" alt="Configurações" width="20px"></span>Configurações</a>
+                <a href="#" class="menuItem" id="ajuda"><span class="menuIcon"><img src="media/ajuda.png" alt="Ajuda" width="20px"></span>Ajuda</a>
+            </div>
+        </nav>
+    </aside>
 
 <main>
     <header class="mainHeader">
-        <h1>Controle de Horas Extras</h1>
-        <span class="menuItem">
-            <i class="fa-regular fa-bell"></i>
-        </span>
+            <h1>Controle de Horas Extras</h1>
+            <span class="menuItem"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
     </header>
 
     <div class="dashboard-grid">
@@ -76,9 +53,8 @@
                 <div class="topoContainer">
                     <h2>Solicitações Recentes</h2>
 
-                    <button class="botaoContainer" onclick="location.href='./solicitacoes.html'">
-                        <span><i class="fa-solid fa-folder-open"></i></span>
-                        Solicitações
+                    <button class="botaoContainer">
+                       <span><img src="media/solicitacoes.png" alt="" width="20px"></span> <span><a>Solicitações</a></span>
                     </button>
                 </div>
 
@@ -100,10 +76,8 @@
                 <div class="topoContainer">
                     <h2>Relatórios</h2>
 
-                    <button class="botaoContainer" onclick="location.href='./relatorios.html'">
-                        <span><i class="fa-solid fa-file-lines"></i></span>
-                        Relatórios
-                    </button>
+                    <button class="botaoContainer"><span><a href="./relatorios.html"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>
+                    </span>Relatórios</span></a></button>
                 </div>
 
                 <table class="tabela1">
@@ -123,17 +97,23 @@
         </div>
 
         <div class="coluna-direita">
-
-            <div class="container container-grafico">
-                <h2>Banco de Horas</h2>
                 
-                <select class="funcionario-select">
-                    <option>Selecione o funcionário</option>
-                    <option value="1">Maria</option>
-                    <option value="2">João</option>
-                    <option value="3">Pedro</option>
-                    <option value="4">Ana</option>
-                </select>
+            <button href="novasolicitacao.html" class="botaoContainerPreto">
+            <img src="media/nova-solicitacao.png" alt="Relatórios" id="botaoNovaSolicitacao">
+                    <h3>Solicitar Hora Extra</h3>
+            </button>
+
+            <div class="container container-grafico">                
+                <h2>Banco de Horas</h2>
+                    
+                    <select class="funcionario-select">
+                        <option>Selecione o funcionário</option>
+                        <option value="1">Mariana Dias</option>
+                        <option value="2">Fernanda Mazza</option>
+                        <option value="3">Ludmila Manzoli</option>
+                        <option value="4">Roberta da Silva</option>
+
+                    </select>
 
                 <div class="grafico-legenda">
                     <div class="legend-item">
@@ -167,11 +147,7 @@
                 
 
             </div>
-            <a href="adicionarlink" class="btn-solicitar-externo">
-    <i class="fa-solid fa-plus-circle"></i> Solicitar Hora Extra
-</a>
         </div>
-
     </div>
 </main>
 
