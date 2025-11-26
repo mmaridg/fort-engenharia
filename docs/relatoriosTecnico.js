@@ -3,7 +3,7 @@ function parseDate_ddmmyyyy(str) {
     const parts = str.trim().split('/');
     if (parts.length !== 3) return null;
     const day = parseInt(parts[0], 10);
-    const month = parseInt(parts[1], 10) - 1;
+    const month = parseInt(parts[1], 10) - 1; 
     const year = parseInt(parts[2], 10);
     if (Number.isNaN(day) || Number.isNaN(month) || Number.isNaN(year)) return null;
     return new Date(year, month, day);
@@ -31,14 +31,19 @@ document.getElementById("btnFiltrar").onclick = () => {
     const obra = document.getElementById("filtroObra").value.trim().toLowerCase();
     const horas = document.getElementById("filtroHoras").value.trim().toLowerCase();
     const status = document.getElementById("filtroStatus").value.trim().toLowerCase();
-    const dataInput = document.getElementById("filtroData").value; 
-    const dataFilter = parseDate_yyyy_mm_dd(dataInput); 
+    const dataInput = document.getElementById("filtroData").value;
+    
+    const dataFilter = parseDate_yyyy_mm_dd(dataInput);
+
     document.querySelectorAll("#tabelaCorpo tr").forEach((linha) => {
-      
+        
         const tObra = (linha.children[0]?.textContent || "").trim().toLowerCase();
-        const tHoras = (linha.children[1]?.textContent || "").trim().toLowerCase();
+        
+        const tDataStr = (linha.children[1]?.textContent || "").trim();
+        
+        const tHoras = (linha.children[2]?.textContent || "").trim().toLowerCase();
+        
         const tStatus = (linha.children[3]?.textContent || "").trim().toLowerCase();
-        const tDataStr = (linha.children[2]?.textContent || "").trim();
 
         const tData = parseDate_ddmmyyyy(tDataStr);
 

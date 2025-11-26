@@ -61,13 +61,14 @@ body {
 
         .direita-container {
             width: 60%;
+            height: 100vh;
             background-image: url('./media/img1.png');
             background-size: cover;
             background-position: center;
         }
         
         .logo-login {
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
             background-color: none;
         }
@@ -95,6 +96,14 @@ body {
             margin-bottom: 5px;
             font-weight: bold;
             font-size: 14px;
+        }
+
+        #manter-conectado {
+            display:inline-flex;
+            width: 10%;
+        }
+         #manter-conectado label{
+            text-wrap: nowrap;
         }
 
         .formulario input {
@@ -363,6 +372,24 @@ main {
     text-align: center;
 }
 
+.tabela2 { 
+    border-radius: 3px;
+    border: #3c393159 1px solid;
+    width: 50%; 
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    outline: 1px #3c393159 solid; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border-collapse: collapse;
+
+    border: #d7d7d7 1px solid;
+    text-align: center;
+}
+
 .tabela1 thead {
     background: #ECB922;
     color: #3C3931;
@@ -384,6 +411,34 @@ main {
 td button {
     border: none;
 }
+
+.botaoNotificar {
+    background-color: #3C3931;
+    color: #ECB922;           
+    
+    border: none;
+    border-radius: 4px;        
+    cursor: pointer;
+    
+    text-decoration: underline;
+    text-decoration-color: #ECB922; 
+    text-underline-offset: 3px;    
+    
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+    
+    transition: background-color 0.2s;
+}
+
+.btn-tabela-notificar:hover {
+    background-color: #3c393159; 
+}
+
+.botoes-acoes {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px; 
+}
+
 
 /*containers*/
 

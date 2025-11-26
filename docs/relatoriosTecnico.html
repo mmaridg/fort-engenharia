@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Relatórios</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="relatoriosTecnico.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Krona+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./media/logo-fort.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="layout">
-
     <aside class="nav">
         <nav class="menu">
              <a href="./index.html"><img src="./media/logo-fort.png" alt="Logo Fort" id="menuLogo"></a>
@@ -38,128 +40,140 @@
         </nav>
     </aside>
 
-    <div class="content">
+    <main>
+        <header class="mainHeader">
+                <h1>Relatórios</h1>
+                <span class="menuItem"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
+        </header>
 
-        <h1>Meus relatórios</h1>
+        <div class="container">
 
-         <div class="filtros">
-            <input type="text" id="filtroObra" placeholder="Obra">
-            <input type="text" id="filtroHoras" placeholder="Horas">
+            <h2>Meus relatórios</h2>
+
+            <div class="filtros">
+                <input type="text" id="filtroObra" placeholder="Obra">
+                <input type="text" id="filtroHoras" placeholder="Horas">
                 <input type="text" id="filtroStatus" placeholder="Status">
-            <input type="date" id="filtroData">
-            <button id="btnFiltrar">Filtrar</button>
-            <button id="btnLimpar">Limpar</button>
-<div class="botoes-acoes">
-    <button class="btn-acao">
-        Download Relatório
-    </button>
-</div>
-        </div>
+                <input type="date" id="filtroData">
 
-       <table>
-    <thead>
-        <tr>
-            <th>Obra</th>
-            <th>Data</th>
-            <th>Horas</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-
-    <tbody id="tabelaCorpo">
-        <tr>
-            <td>Ponte Estaiada</td>
-            <td>04/01/2026</td>
-            <td>5</td>
-            <td>Aprovado</td>
-        </tr>
-        <tr>
-            <td>Viaduto Elevado</td>
-            <td>01/01/2026</td>
-            <td>4</td>
-            <td>Em análise</td>
-        </tr>
-        <tr>
-            <td>Estação de Metrô</td>
-            <td>02/12/2025</td>
-            <td>1</td>
-            <td>Reprovado</td>
-        </tr>
-    </tbody>
-</table>
-
-        <div class="summary-box">
-            <div class="summary-header">Resumo geral da obra “x”</div>
-            <div class="summary-content">
-                Total de horas extras solicitadas por ele: 3 <br>
-                Total de horas extras cumpridas por ele: 3 <br>
-                Status de andamento: Em análise
+                <button id="btnFiltrar" class="botao-aprovar">Filtrar</button>
+                <button id="btnLimpar" class="botao-negar">Limpar</button>
+                
+                <div class="botoes-acoes">
+                    <button class="botaoContainer"><img src="media/relatorios.png" alt="Relatórios" width="20px">
+                        Download Relatório
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <h2>Meu banco de horas</h2>
+        <table class="tabela1">
+        <thead>
+            <tr>
+                <th>Obra</th>
+                <th>Data</th>
+                <th>Horas</th>
+                <th>Status</th>
+            </tr>
+        </thead>
 
-        <div class="bar-chart">
-            <canvas id="graficoBancoHoras"></canvas>
-        </div>
+        <tbody id="tabelaCorpo">
+            <tr>
+                <td>Ponte Estaiada</td>
+                <td>04/01/2026</td>
+                <td>5</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr>
+                <td>Viaduto Elevado</td>
+                <td>01/01/2026</td>
+                <td>4</td>
+                <td>Em análise</td>
+            </tr>
+            <tr>
+                <td>Estação de Metrô</td>
+                <td>02/12/2025</td>
+                <td>1</td>
+                <td>Reprovado</td>
+            </tr>
+        </tbody>
+    </table>
 
-    </div>
+            <div class="tabela2">
+                <div class="summary-header"><b><u>Resumo geral da obra “x”</u></b></div>
+                <div class="summary-content">
+                    Total de horas extras solicitadas por ele: 3 <br>
+                    Total de horas extras cumpridas por ele: 3 <br>
+                    Status de andamento: Em análise
+                </div>
+            </div>
+            <div class="tabela2">
+                <h2>Meu banco de horas</h2>
 
-</div>
-<script src="relatoriosTecnico.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <div class="bar-chart">
+                    <canvas id="graficoBancoHoras"></canvas>
+                </div>
+            </div>
 
-<script>
-    const ctx = document.getElementById("graficoBancoHoras");
+    </main>
+    <footer class="footer">
+        <a href="https://fortes.ind.br/">https://fortes.ind.br/</a>
+        <span>Fale conosco (55) 27 3325-8888</span>
+    </footer>
 
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: ["Horas trabalhadas", "Horas devidas"],
-            datasets: [
-                {
-                    label: "Horas extras trabalhadas",
-                    data: [450, 0],
-                    backgroundColor: "#3c3c3b"
-                },
-                {
-                    label: "Horas extras devidas",
-                    data: [0, 150],
-                    backgroundColor: "#e0b425"
-                }
-            ]
-        },
+    <script src="relatoriosTecnico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        options: {
-            maintainAspectRatio: false,
-            responsive: true,
+    <script>
+        const ctx = document.getElementById("graficoBancoHoras");
 
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 600,
-                    grid: {
-                        color: "#ddd"
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Horas trabalhadas", "Horas devidas"],
+                datasets: [
+                    {
+                        label: "Horas extras trabalhadas",
+                        data: [450, 0],
+                        backgroundColor: "#3c3c3b"
+                    },
+                    {
+                        label: "Horas extras devidas",
+                        data: [0, 150],
+                        backgroundColor: "#e0b425"
                     }
-                },
-                x: {
-                    grid: { display: false }
-                }
+                ]
             },
 
-            plugins: {
-                legend: {
-                    position: "left",
-                    labels: {
-                        usePointStyle: true,
-                        pointStyle: "rect",
-                        padding: 15
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 600,
+                        grid: {
+                            color: "#ddd"
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+
+                plugins: {
+                    legend: {
+                        position: "left",
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: "rect",
+                            padding: 15
+                        }
                     }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
 
 </body>
 </html>
