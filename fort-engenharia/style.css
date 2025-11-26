@@ -2,11 +2,36 @@ body {
             font-family: "Baloo Da 2", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
+            font-size: 15px;
             font-style: normal;
+            line-height: 30px;
+            letter-spacing: 0.20px;
+
             margin: 0;
             padding: 0;
             display: flex; 
             background-color: #F0F0F0; 
+        }
+
+        button {
+            font-family: "Baloo Da 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 15px;
+            font-style: normal;
+            line-height: 30px;
+            letter-spacing: 0.20px;
+        }
+
+        h1 {
+            font-family: "Krona One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+          h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
         }
 
         .esquerda-container {
@@ -33,10 +58,6 @@ body {
             background-color: none;
         }
         
-        h2 {
-            margin-bottom: 25px;
-            font-size: 24px;
-        }
 
         .google-login button {
             width: 100%;
@@ -99,7 +120,6 @@ body {
             font-size: 14px;
         }
 
-        /* Rodapé (Footer) */
         .footer {
             position: fixed;
             bottom: 0;
@@ -111,8 +131,85 @@ body {
             text-align: center;
         }
         .footer a, span {
-            color: #F6F6F6;
-            gap: 30px;
+            color: #ECB922;
+            gap: 20px;
             text-decoration: none;
             margin-left: 15px;
         }
+
+        .centro-container {
+            width: 40%; 
+            padding: 10%;
+            align-items: center;
+            background-color: #F6F6F6;
+            padding: 50px;
+            box-shadow: 2 2 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            justify-content: center; 
+        
+        }
+
+.solicitacoesRecentes {
+    background-color: #F6F6F6;
+    border: #3c393159 1px solid;
+    width: auto;
+    height: 350px;
+    left: 0px;
+    top: 0px;
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+    border-radius: 3px;
+    padding:15px;
+    alignment-baseline: central;
+    align-content: flex-start;
+    padding-bottom: 30px;
+
+
+}
+
+.tabela-solicitacoes { 
+    border-radius: 3px;
+    border: #3c393159 1px solid;
+    width: 100%; 
+
+    outline: 1px #3c393159 solid; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    border: #d7d7d7 1px solid;
+    text-align: center;
+
+
+}
+
+th {
+    background-color: #d7d7d7;
+    padding: 5px;
+}
+
+
+.topoSolicitacoes {
+    align-items: flex-start;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-solicitacao {
+    background-color: #ECB922; 
+    color: #3C3931;
+    border: 1px solid #3c393159;
+    border-radius: 3px;
+
+    align-items: center;
+    height: 45px;
+    padding: 10px ;
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+

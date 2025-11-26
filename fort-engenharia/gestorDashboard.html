@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fortes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Krona+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+     
+        <aside class="menu">
+            <div class="menu-header">
+ 
+            <img src="./media/logo-fort.png" alt="Logo Fort" class="menu-logo">
+            </div>
+
+            <nav class="menu-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon"><img src="media/dashboard-hover.png" alt="Dashboard" width="20px"></span>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><img src="media/nova-solicitacao.png" alt="Nova Solicitação" width="20px"></span>
+                    Nova Solicitação
+                </a>
+                <a href="./solicitacoes.html" class="nav-item">
+                    <span class="nav-icon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>
+                    Solicitações
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>
+                    Relatórios
+                </a>
+            </nav>
+
+            <div class="menu-user-area">
+                <hr class="separator-hr">
+                <a href="#" class="nav-item user-profile">
+                    <span class="nav-icon"><img src="media/profile.png" alt="Gestor Perfil" width="20px"></span>
+                    Gestor
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><img src="media/configuracoes.png" alt="Configurações" width="20px"></span>
+                    Configurações
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon"><img src="media/ajuda.png" alt="Ajuda" width="20px"></span>
+                    Ajuda
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <header class="main-header">
+                <h1>Controle de Horas Extras</h1>
+                <span class="notification-icon"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
+            </header>
+
+            <div class="dashboard-grid">
+                
+                <div class="grid-esquerda">
+                    
+                    <div class="solicitacoesRecentes">
+                        <div class="topoSolicitacoes">
+                            <h2>Solicitações Recentes</h2>
+                            <button class="botao-solicitacao">
+                                <span class="button-icon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>
+                                Solicitações
+                            </button>
+                        </div>
+                        <table class="tabela-solicitacoes">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Data</th>
+                                    <th>Horas</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Maria</td><td>04/01/2026</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
+                                <tr><td>Pedro</td><td>01/01/2026</td><td>4</td><td class="status-analise">Em análise</td></tr>
+                                <tr><td>João</td><td>02/12/2025</td><td>1</td><td class="status-reprovado">Reprovado</td></tr>
+                                <tr><td>João</td><td>20/12/2025</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
+                                <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td class="status-aprovado">Aprovado</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                     <div class="card reports-card">
+                        <h2>Relatórios</h2>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Data</th>
+                                    <th>Horas</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Juliana</td><td>04/01/2026</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
+                                <tr><td>Ricardo</td><td>01/01/2026</td><td>4</td><td class="status-analise">Em análise</td></tr>
+                                <tr><td>Lucas</td><td>02/12/2025</td><td>1</td><td class="status-reprovado">Reprovado</td></tr>
+                                <tr><td>Carla</td><td>20/12/2025</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
+                                <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td class="status-aprovado">Aprovado</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-right">
+                    <div class="card bank-hours">
+                        <h2>Banco de Horas</h2>
+                        
+                        <select class="employee-select">
+                            <option>Selecione o Funcionário</option>
+                        </select>
+
+                        <!-- Legenda do Gráfico -->
+                        <div class="chart-legend">
+                            <div class="legend-item"><span class="legend-color worked"></span> Horas extras trabalhadas</div>
+                            <div class="legend-item"><span class="legend-color owed"></span> Horas extras devidas</div>
+                        </div>
+
+                        <!-- Placeholder para o Gráfico (simulação visual) -->
+                        <div class="chart-placeholder">
+                            <div class="y-axis">
+                                <span>600</span>
+                                <span>450</span>
+                                <span>300</span>
+                                <span>150</span>
+                                <span>0</span>
+                            </div>
+                            <div class="chart-area">
+                                <div class="bar worked-bar"></div>
+                                <div class="bar owed-bar"></div>
+                            </div>
+                            <div class="x-axis">
+                                <span></span> 
+                                <span>450</span>
+                                <span>150</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+ 
+    <footer class="footer">
+        <a href="https://fortes.ind.br/">https://fortes.ind.br/</a>
+        <span>Fale conosco (55) 27 3325-8888</span>
+    </footer>
+</body>
+</html>
