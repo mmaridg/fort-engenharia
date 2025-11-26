@@ -200,6 +200,7 @@ body {
     gap: 20px; 
 }
 
+
 #menuLogo {
     align-items: center;
     justify-content: center;
@@ -253,9 +254,11 @@ main {
     border: 1px solid #3c393159; 
     border-radius: 6px;
     padding: 25px;
+    margin-bottom: 30px;
     box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
     height: auto; 
     width: auto;
+    
 
 }
 
@@ -447,6 +450,15 @@ td button {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+}
+
+.containerImg{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    height: 300px;
 }
 
 #botaoNovaSolicitacao:hover {
