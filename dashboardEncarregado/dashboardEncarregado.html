@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fortes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="dashboardEncarregado.css">
+</head>
+<body>
+     
+<aside class="nav">
+    <nav class="menu">
+
+        <img src="./imagens/logo.fortes.png" alt="Logo Fort" id="menuLogo">
+        
+        <a href="#" class="menuItem ativo">
+            <span class="menuIcon"><i class="fa-solid fa-table-cells-large"></i></span>
+            Dashboard
+        </a>
+
+        <a href="#" class="menuItem">
+            <span class="menuIcon"><i class="fa-solid fa-file-circle-plus"></i></span>
+            Nova Solicitação
+        </a>
+        
+        <a href="./solicitacoesGestor.html" class="menuItem">
+            <span class="menuIcon"><i class="fa-solid fa-users"></i></span>
+            Solicitações
+        </a>
+
+        <a href="#" class="menuItem">
+            <span class="menuIcon"><i class="fa-solid fa-file-lines"></i></span>
+            Relatórios
+        </a>
+
+        <div class="menuRodape">
+            <hr>
+
+            <a href="#" class="menuItem" id="perfil">
+                <span class="menuIcon"><i class="fa-solid fa-user"></i></span>
+                Encarregado
+            </a>
+
+            <a href="#" class="menuItem" id="configuracoes">
+                <span class="menuIcon"><i class="fa-solid fa-gear"></i></span>
+                Configurações
+            </a>
+
+            <a href="#" class="menuItem" id="ajuda">
+                <span class="menuIcon"><i class="fa-solid fa-circle-question"></i></span>
+                Ajuda
+            </a>
+        </div>
+    </nav>
+</aside>
+
+<main>
+    <header class="mainHeader">
+        <h1>Controle de Horas Extras</h1>
+        <span class="menuItem">
+            <i class="fa-regular fa-bell"></i>
+        </span>
+    </header>
+
+    <div class="dashboard-grid">
+        
+        <div class="coluna-esquerda">
+            
+            <div class="container">
+                <div class="topoContainer">
+                    <h2>Solicitações Recentes</h2>
+
+                    <button class="botaoContainer" onclick="location.href='./solicitacoes.html'">
+                        <span><i class="fa-solid fa-folder-open"></i></span>
+                        Solicitações
+                    </button>
+                </div>
+
+                <table class="tabela1">
+                    <thead>
+                        <tr><th>Nome</th><th>Data</th><th>Horas</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Maria</td><td>04/01/2026</td><td>5</td><td>Aprovado</td></tr>
+                        <tr><td>Pedro</td><td>01/01/2026</td><td>4</td><td>Em análise</td></tr>
+                        <tr><td>João</td><td>02/12/2025</td><td>1</td><td>Reprovado</td></tr>
+                        <tr><td>João</td><td>20/12/2025</td><td>5</td><td>Aprovado</td></tr>
+                        <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td>Aprovado</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container">
+                <div class="topoContainer">
+                    <h2>Relatórios</h2>
+
+                    <button class="botaoContainer" onclick="location.href='./relatorios.html'">
+                        <span><i class="fa-solid fa-file-lines"></i></span>
+                        Relatórios
+                    </button>
+                </div>
+
+                <table class="tabela1">
+                    <thead>
+                        <tr><th>Nome</th><th>Data</th><th>Horas</th><th>Status</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Juliana</td><td>04/01/2026</td><td>5</td><td>Aprovado</td></tr>
+                        <tr><td>Ricardo</td><td>01/01/2026</td><td>4</td><td>Em análise</td></tr>
+                        <tr><td>Lucas</td><td>02/12/2025</td><td>1</td><td>Reprovado</td></tr>
+                        <tr><td>Carla</td><td>20/12/2025</td><td>5</td><td>Aprovado</td></tr>
+                        <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td>Aprovado</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="coluna-direita">
+
+            <div class="container container-grafico">
+                <h2>Banco de Horas</h2>
+                
+                <select class="funcionario-select">
+                    <option>Selecione o funcionário</option>
+                    <option value="1">Maria</option>
+                    <option value="2">João</option>
+                    <option value="3">Pedro</option>
+                    <option value="4">Ana</option>
+                </select>
+
+                <div class="grafico-legenda">
+                    <div class="legend-item">
+                        <span class="dot trabalhado"></span>
+                        Horas extras trabalhadas
+                    </div>
+                    <div class="legend-item">
+                        <span class="dot devida"></span>
+                        Horas extras devidas
+                    </div>
+                </div>
+
+                <div class="chart-wrapper">
+                    <div class="y-axis">
+                        <span>600</span><span>450</span><span>300</span><span>150</span><span>0</span>
+                    </div>
+                    
+                    <div class="chart-area">
+                        <div class="bar-group">
+                            <div class="bar bar-dark" style="height: 65%;"></div>
+                            <div class="bar bar-yellow" style="height: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="x-axis">
+                    <span>450</span>
+                    <span>150</span>
+                </div>
+
+                
+
+            </div>
+            <a href="adicionarlink" class="btn-solicitar-externo">
+    <i class="fa-solid fa-plus-circle"></i> Solicitar Hora Extra
+</a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <a href="https://fortes.ind.br/">https://fortes.ind.br/</a>
+    <span>Fale conosco (55) 27 3325-8888</span>
+</footer>
+
+</body>
+</html>
