@@ -1,12 +1,3 @@
-@font-face {
-    font-family: "Azurite";
-    src: url("./fontes/azurite-regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "Causten";
-    src: url("./fontes/Causten-Medium.otf") format("opentype");
-}
 
 
 body, p, .texto, .btn-login {
