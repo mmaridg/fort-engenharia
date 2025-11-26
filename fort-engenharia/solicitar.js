@@ -14,7 +14,7 @@ function aplicarEventos() {
     document.querySelectorAll(".btn.aprovar").forEach((btn) => {
         btn.onclick = (e) => {
             const linha = e.target.closest("tr");
-            linha.style.background = "#d6ffd6"; 
+            linha.style.background = "#457e270e"; 
         };
     });
 }
@@ -23,7 +23,7 @@ aplicarEventos();
 
 confirmarNegacao.onclick = () => {
     if (linhaSelecionada) {
-        linhaSelecionada.style.background = "#ffd6d6"; 
+        linhaSelecionada.style.background = "rgba(255, 214, 214, 0.36)"; 
     }
     modal.style.display = "none";
 };
