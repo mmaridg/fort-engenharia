@@ -11,28 +11,35 @@ body {
             padding: 0;
             display: flex; 
             background-color: #F0F0F0; 
-        }
 
-        button {
-            font-family: "Baloo Da 2", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-size: 15px;
-            font-style: normal;
-            line-height: 30px;
-            letter-spacing: 0.20px;
-        }
+            color: #3C3931;
+}
 
-        h1 {
-            font-family: "Krona One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
+    button {
+        font-family: "Baloo Da 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-size: 15px;
+        font-style: normal;
+        line-height: 30px;
+        letter-spacing: 0.20px;
+    }
 
-          h2 {
-            margin-bottom: 25px;
-            font-size: 24px;
-        }
+    hr {
+        color: #3c393159;
+        width: 80%;
+    }
+
+    h1 {
+        font-family: "Krona One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
 
         .esquerda-container {
             width: 40%; 
@@ -152,24 +159,185 @@ body {
         
         }
 
-.solicitacoesRecentes {
-    background-color: #F6F6F6;
-    border: #3c393159 1px solid;
-    width: auto;
-    height: 350px;
-    left: 0px;
-    top: 0px;
-    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+.nav {
+    width: 250px;
+    height: 100vh; 
+    background-color: #F0F0F0; 
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 30px; 
+    padding-left: 50px;
+    border-right: 1px solid #3c393159; 
+    border-bottom: 1px solid #3c393159; 
+
     border-radius: 3px;
-    padding:15px;
-    alignment-baseline: central;
-    align-content: flex-start;
-    padding-bottom: 30px;
 
 
 }
 
-.tabela-solicitacoes { 
+.menuItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #3C3931; 
+    padding: 15px 0px; 
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    gap: 20px; 
+}
+
+#menuLogo {
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 40px;
+    width: 100%;
+    overflow-y: auto; 
+    padding-bottom: 80px;
+    
+}
+
+/*Dashboard*/
+.dashboard-grid {
+    display: flex;
+    gap: 30px; 
+    align-items: flex-start; 
+}
+
+.coluna-esquerda {
+    flex: 1.6; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.coluna-direita {
+    flex: 1; 
+}
+
+.mainHeader {
+
+    align-items: flex-start;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container {
+    background-color: #F6F6F6; 
+    border: 1px solid #3c393159; 
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+    height: auto; 
+    width: auto;
+
+}
+
+/*GRÁFICO Banco de Horas*/
+.container-grafico {
+    min-height: 450px;
+}
+
+.funcionario-select {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #F0F0F0;
+}
+
+.grafico-legenda {
+    margin-bottom: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.dot {
+    width: 20px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+.dot.trabalhado { background-color: #3C3931; }
+.dot.devida { background-color: #ECB922; }
+
+
+/* Estrutura visual do gráfico */
+.chart-wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding-left: 10px;
+    position: relative;
+    margin-left: 30px; 
+    
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 49px,
+        #ddd 50px
+    );
+}
+
+.y-axis {
+    position: absolute;
+    left: -35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+    bottom: -5px;
+}
+
+.chart-area {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px; }
+
+.bar-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100px; 
+}
+
+.bar-dark { background-color: #3C3931; }
+.bar-yellow { background-color: #ECB922; }
+
+.x-axis {
+    display: flex;
+    margin-left: 80px; 
+    margin-top: 5px;
+    gap: 70px;
+    font-size: 11px;
+    color: #666;
+}
+
+/*TABELA Solicitações*/
+
+.tabela1 { 
     border-radius: 3px;
     border: #3c393159 1px solid;
     width: 100%; 
@@ -180,8 +348,6 @@ body {
     align-items: flex-start; 
     border: #d7d7d7 1px solid;
     text-align: center;
-
-
 }
 
 th {
@@ -190,26 +356,26 @@ th {
 }
 
 
-.topoSolicitacoes {
+.topoContainer {
     align-items: flex-start;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.botao-solicitacao {
+.botaoContainer {
     background-color: #ECB922; 
     color: #3C3931;
     border: 1px solid #3c393159;
     border-radius: 3px;
 
     align-items: center;
+    display: inline-flex;
+    justify-content: center;
     height: 45px;
     padding: 10px ;
     cursor: pointer;
     display: flex;
     gap: 20px;
 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);}

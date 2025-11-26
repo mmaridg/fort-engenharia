@@ -15,145 +15,119 @@
 </head>
 <body>
      
-        <aside class="menu">
-            <div class="menu-header">
- 
-            <img src="./media/logo-fort.png" alt="Logo Fort" class="menu-logo">
+    <aside class="nav">
+        <nav class="menu">
+            <img src="./media/logo-fort.png" alt="Logo Fort" id="menuLogo">
+            
+            <a href="#" class="menuItem ativo">
+                <span class="menuIcon"><img src="media/dashboard-hover.png" alt="Dashboard" width="20px"></span> Dashboard</a>
+
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/nova-solicitacao.png" alt="Nova Solicitação" width="20px"></span> Nova Solicitação </a>
+            
+            <a href="./solicitacoes.html" class="menuItem">
+                <span class="menuIcon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>Solicitações</a>
+
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>Relatórios</a>
+        
+        
+            <div class="menuRodape">
+            <hr>
+                <a href="#" class="menuItem" id="perfil"><span class="menuIcon"><img src="media/profile.png" alt="Gestor Perfil" width="20px"></span>Gestor</a>
+                <a href="#" class="menuItem" id="configuracoes"><span class="menuIcon"><img src="media/configuracoes.png" alt="Configurações" width="20px"></span>Configurações</a>
+                <a href="#" class="menuItem" id="ajuda"><span class="menuIcon"><img src="media/ajuda.png" alt="Ajuda" width="20px"></span>Ajuda</a>
             </div>
+        </nav>
+    </aside>
 
-            <nav class="menu-nav">
-                <a href="#" class="nav-item active">
-                    <span class="nav-icon"><img src="media/dashboard-hover.png" alt="Dashboard" width="20px"></span>
-                    Dashboard
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="nav-icon"><img src="media/nova-solicitacao.png" alt="Nova Solicitação" width="20px"></span>
-                    Nova Solicitação
-                </a>
-                <a href="./solicitacoes.html" class="nav-item">
-                    <span class="nav-icon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>
-                    Solicitações
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="nav-icon"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>
-                    Relatórios
-                </a>
-            </nav>
+<main>
+        <header class="mainHeader">
+            <h1>Controle de Horas Extras</h1>
+            <span class="menuItem"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
+        </header>
 
-            <div class="menu-user-area">
-                <hr class="separator-hr">
-                <a href="#" class="nav-item user-profile">
-                    <span class="nav-icon"><img src="media/profile.png" alt="Gestor Perfil" width="20px"></span>
-                    Gestor
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="nav-icon"><img src="media/configuracoes.png" alt="Configurações" width="20px"></span>
-                    Configurações
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="nav-icon"><img src="media/ajuda.png" alt="Ajuda" width="20px"></span>
-                    Ajuda
-                </a>
-            </div>
-        </aside>
-
-        <main>
-            <header class="main-header">
-                <h1>Controle de Horas Extras</h1>
-                <span class="notification-icon"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
-            </header>
-
-            <div class="dashboard-grid">
+        <div class="dashboard-grid">
+            
+            <div class="coluna-esquerda">
                 
-                <div class="grid-esquerda">
-                    
-                    <div class="solicitacoesRecentes">
-                        <div class="topoSolicitacoes">
-                            <h2>Solicitações Recentes</h2>
-                            <button class="botao-solicitacao">
-                                <span class="button-icon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>
-                                Solicitações
-                            </button>
-                        </div>
-                        <table class="tabela-solicitacoes">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Data</th>
-                                    <th>Horas</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Maria</td><td>04/01/2026</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
-                                <tr><td>Pedro</td><td>01/01/2026</td><td>4</td><td class="status-analise">Em análise</td></tr>
-                                <tr><td>João</td><td>02/12/2025</td><td>1</td><td class="status-reprovado">Reprovado</td></tr>
-                                <tr><td>João</td><td>20/12/2025</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
-                                <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td class="status-aprovado">Aprovado</td></tr>
-                            </tbody>
-                        </table>
+                <div class="container">
+                    <div class="topoContainer">
+                        <h2>Solicitações Recentes</h2>
+                        <button class="botaoContainer">
+                            <span><a href="./solicitacoes.html"><img src="media/solicitacoes.png" alt="" width="20px"></a></span>Solicitações
+                        </button>
                     </div>
+                    <table class="tabela1">
+                        <thead>
+                            <tr><th>Nome</th><th>Data</th><th>Horas</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Maria</td><td>04/01/2026</td><td>5</td><td>Aprovado</td></tr>
+                            <tr><td>Pedro</td><td>01/01/2026</td><td>4</td><td>Em análise</td></tr>
+                            <tr><td>João</td><td>02/12/2025</td><td>1</td><td>Reprovado</td></tr>
+                            <tr><td>João</td><td>20/12/2025</td><td>5</td><td>Aprovado</td></tr>
+                            <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td>Aprovado</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                     <div class="card reports-card">
+                <div class="container">
+                    <div class="topoContainer">
                         <h2>Relatórios</h2>
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Data</th>
-                                    <th>Horas</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Juliana</td><td>04/01/2026</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
-                                <tr><td>Ricardo</td><td>01/01/2026</td><td>4</td><td class="status-analise">Em análise</td></tr>
-                                <tr><td>Lucas</td><td>02/12/2025</td><td>1</td><td class="status-reprovado">Reprovado</td></tr>
-                                <tr><td>Carla</td><td>20/12/2025</td><td>5</td><td class="status-aprovado">Aprovado</td></tr>
-                                <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td class="status-aprovado">Aprovado</td></tr>
-                            </tbody>
-                        </table>
+                        <button class="botaoContainer"><span><a href="./relatorios.html"><img src="media/relatorios.png" alt="Relatórios" width="20px"></a></span>Relatórios</button>
                     </div>
+                    <table class="tabela1">
+                        <thead>
+                            <tr><th>Nome</th><th>Data</th><th>Horas</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Juliana</td><td>04/01/2026</td><td>5</td><td>Aprovado</td></tr>
+                            <tr><td>Ricardo</td><td>01/01/2026</td><td>4</td><td>Em análise</td></tr>
+                            <tr><td>Lucas</td><td>02/12/2025</td><td>1</td><td>Reprovado</td></tr>
+                            <tr><td>Carla</td><td>20/12/2025</td><td>5</td><td>Aprovado</td></tr>
+                            <tr><td>Ana</td><td>10/12/2025</td><td>8</td><td>Aprovado</td></tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <div class="grid-right">
-                    <div class="card bank-hours">
-                        <h2>Banco de Horas</h2>
+            </div> <div class="coluna-direita">
+                <div class="container container-grafico">
+                    <h2>Banco de Horas</h2>
+                    
+                    <select class="funcionario-select">
+                        <option>Selecione o funcionário</option>
+                        <option value="1">Mariana Dias</option>
+                        <option value="2">Fernanda Mazza</option>
+                        <option value="3">Ludmila Manzoli</option>
+                        <option value="4">Roberta da Silva</option>
+
+                    </select>
+
+                    <div class="grafico-legenda">
+                        <div class="legend-item"><span class="dot trabalhado"></span> Horas extras trabalhadas</div>
+                        <div class="legend-item"><span class="dot devida"></span> Horas extras devidas</div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <div class="y-axis">
+                            <span>600</span><span>450</span><span>300</span><span>150</span><span>0</span>
+                        </div>
                         
-                        <select class="employee-select">
-                            <option>Selecione o Funcionário</option>
-                        </select>
-
-                        <!-- Legenda do Gráfico -->
-                        <div class="chart-legend">
-                            <div class="legend-item"><span class="legend-color worked"></span> Horas extras trabalhadas</div>
-                            <div class="legend-item"><span class="legend-color owed"></span> Horas extras devidas</div>
-                        </div>
-
-                        <!-- Placeholder para o Gráfico (simulação visual) -->
-                        <div class="chart-placeholder">
-                            <div class="y-axis">
-                                <span>600</span>
-                                <span>450</span>
-                                <span>300</span>
-                                <span>150</span>
-                                <span>0</span>
-                            </div>
-                            <div class="chart-area">
-                                <div class="bar worked-bar"></div>
-                                <div class="bar owed-bar"></div>
-                            </div>
-                            <div class="x-axis">
-                                <span></span> 
-                                <span>450</span>
-                                <span>150</span>
+                        <div class="chart-area">
+                            <div class="bar-group">
+                                <div class="bar bar-dark" style="height: 65%;"></div> <div class="bar bar-yellow" style="height: 25%;"></div>
                             </div>
                         </div>
-
                     </div>
+                     <div class="x-axis">
+                        <span>450</span>
+                        <span>150</span>
+                    </div>
+
                 </div>
-            </div>
-        </main>
+            </div> </div>
+    </main>
 
  
     <footer class="footer">
