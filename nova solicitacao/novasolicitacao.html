@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Solicitação</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="novasolicitacao.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="./imagens/logo-fort 2.png" alt="Logo Fortes">
+    </div>
+
+    <nav class="menu">
+      <a class="menu-item"><i class="fa-solid fa-border-all icon"></i><span>Dashboard</span></a>
+      <a class="menu-item"><i class="fa-solid fa-file-signature icon"></i><span>Nova Solicitação</span></a>
+      <a class="menu-item active"><i class="fa-solid fa-people-group icon"></i><span>Solicitações</span></a>
+      <a class="menu-item"><i class="fa-solid fa-file-lines icon"></i><span>Relatórios</span></a>
+
+      <div class="divider"></div>
+
+      <a class="menu-item"><i class="fa-solid fa-user icon"></i><span>Gestor</span></a>
+      <a class="menu-item"><i class="fa-solid fa-gear icon"></i><span>Configurações</span></a>
+      <a class="menu-item ajuda"><i class="fa-solid fa-circle-question icon"></i><span>Ajuda</span></a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Nova Solicitação</h1>
+
+    <div class="card">
+      <h2>Solicitar Hora Extra</h2>
+
+      <form id="solicitacaoForm">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="obraInput">Obra *</label>
+            <input type="text" id="obraInput" list="listaObras" placeholder="Digite ou selecione a obra" required>
+            <datalist id="listaObras">
+              <option value="Ponte Estaiada">
+              <option value="Viaduto Elevado">
+              <option value="Estação de Metrô">
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="funcionarioInput">Funcionário *</label>
+            <input type="text" id="funcionarioInput" list="listaFuncionarios" placeholder="Digite ou selecione o funcionário" required>
+            <datalist id="listaFuncionarios">
+              <option value="João">
+              <option value="Maria">
+                <option value="Pedro"></option>
+            </datalist>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="dataInput">Data *</label>
+            <input type="date" id="dataInput" required>
+          </div>
+
+          <div class="form-group">
+            <label for="horasInput">Quantidade de horas *</label>
+            <input type="number" id="horasInput" min="1" max="24" required>
+          </div>
+        </div>
+
+        <label for="motivoInput">Justificativa (opcional)</label>
+        <textarea id="motivoInput" placeholder="Descreva o motivo..."></textarea>
+
+        <div class="toggle-container">
+          <label>Desejo notificar o gestor por e-mail</label>
+          <label class="switch">
+            <input type="checkbox" id="notificar">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn cancel">Cancelar</button>
+          <button type="submit" class="btn confirm">Confirmar</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+</div>
+
+<div id="toast" class="toast">Solicitação criada e e-mail enviado!</div>
+
+<script src="novasolicitacao.js"></script>
+
+</body>
+</html>
