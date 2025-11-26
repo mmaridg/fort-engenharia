@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Relatórios</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="relatoriosTecnico.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./imagens/logo.fortes 3.png" alt="Logo Fortes">
+        </div>
+
+        <nav class="menu">
+
+            <a class="menu-item">
+                <i class="fa-solid fa-border-all icon"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a class="menu-item">
+                <i class="fa-solid fa-file-signature icon"></i>
+                <span>Nova Solicitação</span>
+            </a>
+
+            <a class="menu-item active">
+                <i class="fa-solid fa-people-group icon"></i>
+                <span>Solicitações</span>
+            </a>
+
+            <a class="menu-item">
+                <i class="fa-solid fa-file-lines icon"></i>
+                <span>Relatórios</span>
+            </a>
+
+            <div class="divider"></div>
+
+            <a class="menu-item">
+                <i class="fa-solid fa-user icon"></i>
+                <span>Gestor</span>
+            </a>
+
+            <a class="menu-item">
+                <i class="fa-solid fa-gear icon"></i>
+                <span>Configurações</span>
+            </a>
+
+            <a class="menu-item ajuda">
+                <i class="fa-solid fa-circle-question icon"></i>
+                <span>Ajuda</span>
+            </a>
+
+        </nav>
+    </aside>
+
+    <div class="content">
+
+        <h1>Meus relatórios</h1>
+
+         <div class="filtros">
+            <input type="text" id="filtroObra" placeholder="Obra">
+            <input type="text" id="filtroHoras" placeholder="Horas">
+                <input type="text" id="filtroStatus" placeholder="Status">
+            <input type="date" id="filtroData">
+            <button id="btnFiltrar">Filtrar</button>
+            <button id="btnLimpar">Limpar</button>
+<div class="botoes-acoes">
+    <button class="btn-acao">
+        Download Relatório
+    </button>
+</div>
+        </div>
+
+       <table>
+    <thead>
+        <tr>
+            <th>Obra</th>
+            <th>Data</th>
+            <th>Horas</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="tabelaCorpo">
+        <tr>
+            <td>Ponte Estaiada</td>
+            <td>04/01/2026</td>
+            <td>5</td>
+            <td>Aprovado</td>
+        </tr>
+        <tr>
+            <td>Viaduto Elevado</td>
+            <td>01/01/2026</td>
+            <td>4</td>
+            <td>Em análise</td>
+        </tr>
+        <tr>
+            <td>Estação de Metrô</td>
+            <td>02/12/2025</td>
+            <td>1</td>
+            <td>Reprovado</td>
+        </tr>
+    </tbody>
+</table>
+
+        <div class="summary-box">
+            <div class="summary-header">Resumo geral da obra “x”</div>
+            <div class="summary-content">
+                Total de horas extras solicitadas por ele: 3 <br>
+                Total de horas extras cumpridas por ele: 3 <br>
+                Status de andamento: Em análise
+            </div>
+        </div>
+
+        <h2>Meu banco de horas</h2>
+
+        <div class="bar-chart">
+            <canvas id="graficoBancoHoras"></canvas>
+        </div>
+
+    </div>
+
+</div>
+<script src="relatoriosTecnico.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById("graficoBancoHoras");
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Horas trabalhadas", "Horas devidas"],
+            datasets: [
+                {
+                    label: "Horas extras trabalhadas",
+                    data: [450, 0],
+                    backgroundColor: "#3c3c3b"
+                },
+                {
+                    label: "Horas extras devidas",
+                    data: [0, 150],
+                    backgroundColor: "#e0b425"
+                }
+            ]
+        },
+
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 600,
+                    grid: {
+                        color: "#ddd"
+                    }
+                },
+                x: {
+                    grid: { display: false }
+                }
+            },
+
+            plugins: {
+                legend: {
+                    position: "left",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: "rect",
+                        padding: 15
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
