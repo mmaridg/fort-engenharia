@@ -151,27 +151,14 @@ body {
             margin-left: 15px;
         }
 
-        .centro-container {
-            width: 40%; 
-            padding: 10%;
-            align-items: center;
-            background-color: #F6F6F6;
-            padding: 50px;
-            box-shadow: 2 2 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            margin: auto;
-            align-items: center;
-            justify-content: center;
-            justify-content: center; 
-        
-        }
 
 .nav {
     width: 250px;
     height: 100vh; 
     background-color: #F0F0F0; 
     display: flex;
-    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
     row-gap: 20px;
     padding-top: 30px; 
     padding-left: 50px;
@@ -224,6 +211,12 @@ main {
     align-items: flex-start; 
 }
 
+.coluna-centro {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 850px; 
+}
+
 .coluna-esquerda {
     flex: 1.6; 
     display: flex;
@@ -236,10 +229,13 @@ main {
 }
 
 .mainHeader {
-    align-items: flex-start;
-    margin-bottom: 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    margin: 0 auto 30px auto;
 
 }
 
@@ -398,15 +394,6 @@ td button {
     justify-content: space-between;
 }
 
-#botaoNovaSolicitacao{
-    background-color: #ECB922; 
-    color: #3C3931;
-    border: 1px solid #3c393159;
-    border-radius: 3px;
-    padding: 10px;
-    height: 25px;
-}
-
 #botaoNovaSolicitacao:hover {
     background-color: #f0f0f0;
 }
@@ -429,13 +416,43 @@ td button {
     display: flex;
     gap: 20px;
 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);}
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+}
 
 .botaoContainerPreto {
     background-color: #3C3931; 
     color: #f0f0f0;
     height: fit-content;
     width: 100%;
+}
+
+.botoes-formulario {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.botaoContainerCancelar {
+    background-color: #3C3931; 
+    color: #ECB922;
+    border: 1px solid #3c393159;
+    border-radius: 3px;
+
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    padding: 10%;
+    height: 45px;
+    padding: 10px ;
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+
 }
 
 .modal {
@@ -463,4 +480,28 @@ td button {
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; 
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333; 
+    color: #f0f0f0; 
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000; 
+    left: 50%;
+    bottom: 30px; 
+    transform: translateX(-50%); 
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s, visibility 0.5s;
 }

@@ -1,102 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Solicitação</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fortes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Krona+One&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="./media/logo-fort.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="novasolicitacao.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <aside class="nav">
+        <nav class="menu">
+            <img src="./media/logo-fort.png" alt="Logo Fort" id="menuLogo">
+            
+            <a href="./dashboardEncarregado.html" class="menuItem ativo">
+                <span class="menuIcon"><img src="media/dashboard.png" alt="Dashboard" width="20px"></span> Dashboard</a>
 
-<div class="layout">
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/nova-solicitacao-hover.png" alt="Nova Solicitação" width="20px"></span> Nova Solicitação </a>
+            
+            <a href="./solicitarGestor.html" class="menuItem">
+                <span class="menuIcon"><img src="media/solicitacoes.png" alt="Solicitações" width="20px"></span>Solicitações</a>
 
-  <aside class="sidebar">
-    <div class="logo">
-      <img src="./media/logo-fort 2.png" alt="Logo Fortes">
-    </div>
+            <a href="#" class="menuItem">
+                <span class="menuIcon"><img src="media/relatorios.png" alt="Relatórios" width="20px"></span>Relatórios</a>
+        
+            <div class="menuRodape">
+            <hr>
+                <a href="#" class="menuItem" id="perfil"><span class="menuIcon"><img src="media/profile.png" alt="Encarregado Perfil" width="20px"></span>Encarregado</a>
+                <a href="#" class="menuItem" id="configuracoes"><span class="menuIcon"><img src="media/configuracoes.png" alt="Configurações" width="20px"></span>Configurações</a>
+                <a href="#" class="menuItem" id="ajuda"><span class="menuIcon"><img src="media/ajuda.png" alt="Ajuda" width="20px"></span>Ajuda</a>
+            </div>
+        </nav>
+    </aside>
+  <main>
+    <header>
+      <div class="mainHeader">
+        <h1>Nova Solicitação</h1>
+        <span class="menuItem"><img src="media/sino-off.png" alt="Notificações" width="20px"></span>
+      </div>
+    </header>
+        <div class="container">
+          <form id="formulario">
 
-    <nav class="menu">
-      <a class="menu-item"><i class="fa-solid fa-border-all icon"></i><span>Dashboard</span></a>
-      <a class="menu-item"><i class="fa-solid fa-file-signature icon"></i><span>Nova Solicitação</span></a>
-      <a class="menu-item active"><i class="fa-solid fa-people-group icon"></i><span>Solicitações</span></a>
-      <a class="menu-item"><i class="fa-solid fa-file-lines icon"></i><span>Relatórios</span></a>
+            <div class="form-grid">
+              <div class="formulario">
+                <h2>Solicitar Hora Extra</h2>
+                <label for="obraInput">Obra *</label>
+                <input type="text" id="obraInput" list="listaObras" placeholder="Digite ou selecione a obra" required>
+                <datalist id="listaObras">
+                  <option value="Ponte Estaiada">
+                  <option value="Viaduto Elevado">
+                  <option value="Estação de Metrô">
+                </datalist>
+              </div>
 
-      <div class="divider"></div>
+              <div class="formulario">
+                <label for="funcionarioInput">Funcionário *</label>
+                <input type="text" id="funcionarioInput" list="listaFuncionarios" placeholder="Digite ou selecione o funcionário" required>
+                <datalist id="listaFuncionarios">
+                  <option value="João">
+                  <option value="Maria">
+                    <option value="Pedro"></option>
+                </datalist>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="formulario">
+                <label for="dataInput">Data *</label>
+                <input type="date" id="dataInput" required>
+              </div>
+              <div class="formulario">
+                <label for="horasInput">Quantidade de horas *</label>
+                <input type="number" id="horasInput" min="1" max="24" required>
+              </div>
+            </div>
 
-      <a class="menu-item"><i class="fa-solid fa-user icon"></i><span>Gestor</span></a>
-      <a class="menu-item"><i class="fa-solid fa-gear icon"></i><span>Configurações</span></a>
-      <a class="menu-item ajuda"><i class="fa-solid fa-circle-question icon"></i><span>Ajuda</span></a>
-    </nav>
-  </aside>
+            <label for="motivoInput">Justificativa (opcional)</label>
+            <textarea id="motivoInput" class="formulario" placeholder="Descreva o motivo..."></textarea>
 
-  <main class="content">
-    <h1>Nova Solicitação</h1>
+            <div class="toggle-container">
+              <label>Desejo notificar o gestor por e-mail</label>
+              <label class="switch">
+                <input type="checkbox" id="notificar">
+                <span class="slider round"></span>
+              </label>
+            </div>
 
-    <div class="card">
-      <h2>Solicitar Hora Extra</h2>
-
-      <form id="solicitacaoForm">
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="obraInput">Obra *</label>
-            <input type="text" id="obraInput" list="listaObras" placeholder="Digite ou selecione a obra" required>
-            <datalist id="listaObras">
-              <option value="Ponte Estaiada">
-              <option value="Viaduto Elevado">
-              <option value="Estação de Metrô">
-            </datalist>
-          </div>
-
-          <div class="form-group">
-            <label for="funcionarioInput">Funcionário *</label>
-            <input type="text" id="funcionarioInput" list="listaFuncionarios" placeholder="Digite ou selecione o funcionário" required>
-            <datalist id="listaFuncionarios">
-              <option value="João">
-              <option value="Maria">
-                <option value="Pedro"></option>
-            </datalist>
-          </div>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="dataInput">Data *</label>
-            <input type="date" id="dataInput" required>
-          </div>
-
-          <div class="form-group">
-            <label for="horasInput">Quantidade de horas *</label>
-            <input type="number" id="horasInput" min="1" max="24" required>
-          </div>
-        </div>
-
-        <label for="motivoInput">Justificativa (opcional)</label>
-        <textarea id="motivoInput" placeholder="Descreva o motivo..."></textarea>
-
-        <div class="toggle-container">
-          <label>Desejo notificar o gestor por e-mail</label>
-          <label class="switch">
-            <input type="checkbox" id="notificar">
-            <span class="slider round"></span>
-          </label>
-        </div>
-
-        <div class="btn-row">
-          <button type="button" class="btn cancel">Cancelar</button>
-          <button type="submit" class="btn confirm">Confirmar</button>
-        </div>
-
-      </form>
-    </div>
+            <div class="botoes-formulario">
+              <button type="button" id="btn cancelar" class="botaoContainerCancelar">Cancelar </button>
+              <button type="submit" id="btn confirmar" class="botaoContainer">Confirmar </button>
+            </div>
+          </form>
+      </div>
   </main>
 
-</div>
-
-<div id="toast" class="toast">Solicitação criada e e-mail enviado!</div>
+<footer class="footer">
+    <a href="https://fortes.ind.br/">https://fortes.ind.br/</a>
+    <span>Fale conosco (55) 27 3325-8888</span>
+</footer>
 
 <script src="novasolicitacao.js"></script>
 

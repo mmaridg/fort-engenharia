@@ -1,25 +1,48 @@
-document.getElementById("solicitacaoForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const formulario = document.getElementById("formulario");
+    const btnCancelar = document.querySelector(".botaoContainerCancelar");
 
-  const obra = document.getElementById("obraInput").value.trim();
-  const funcionario = document.getElementById("funcionarioInput").value.trim();
-  const data = document.getElementById("dataInput").value;
-  const horas = document.getElementById("horasInput").value;
-  const motivo = document.getElementById("motivoInput").value;
-  const notificar = document.getElementById("notificar").checked;
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-  console.log("Obra:", obra);
-  console.log("Funcionário:", funcionario);
-  console.log("Data:", data);
-  console.log("Horas:", horas);
-  console.log("Motivo:", motivo);
-  console.log("Notificar gestor:", notificar);
+        const obra = document.getElementById("obraInput").value;
+        const funcionario = document.getElementById("funcionarioInput").value;
+        const data = document.getElementById("dataInput").value;
+        const horas = document.getElementById("horasInput").value;
+        const motivo = document.getElementById("motivoInput").value;
+        const notificar = document.getElementById("notificar").checked;
 
-  const toast = document.getElementById("toast");
-  toast.classList.add("show");
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
+        if (!obra || !funcionario || !data || !horas) {
+            alert("Por favor, preencha todos os campos obrigatórios (*).");
+            return;
+        }
 
-  this.reset();
+        const dadosSolicitacao = {
+            obra: obra,
+            funcionario: funcionario,
+            data: data,
+            horas: horas,
+            motivo: motivo,
+            notificar: notificar
+        };
+
+        console.log("Dados enviados:", dadosSolicitacao);
+
+        // Aqui mostramos o Feedback para o usuário:
+        alert("Solicitação de Hora Extra criada com sucesso!\n\nObra: " + obra + "\nFuncionário: " + funcionario);
+
+        formulario.reset();
+    });
+
+    if (btnCancelar) {
+        btnCancelar.addEventListener("click", function() {
+            const confirmarCancelamento = confirm("Deseja realmente limpar o formulário?");
+            
+            if (confirmarCancelamento) {
+                formulario.reset();
+                console.log("Formulário limpo pelo usuário.");
+            }
+        });
+    }
 });
