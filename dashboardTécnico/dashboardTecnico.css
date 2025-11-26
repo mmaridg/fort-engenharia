@@ -1,0 +1,384 @@
+
+body {
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 30px;
+    letter-spacing: 0.20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #F0F0F0;
+    color: #3C3931;
+}
+
+button {
+    font-family: "Baloo Da 2", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.20px;
+}
+
+hr {
+    color: #3c393159;
+    width: 80%;
+}
+
+h1 {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.esquerda-container {
+    width: 40%;
+    background-color: #F6F6F6;
+    padding: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.direita-container {
+    width: 60%;
+    background-image: url('./media/img1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-login {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.google-login button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #F6F6F6;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.form-options {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #ECB922;
+    color: #3C3931;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #3C3931;
+    color: #F6F6F6;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer a,
+.footer span {
+    color: #ECB922;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.centro-container {
+    width: 40%;
+    background-color: #F6F6F6;
+    padding: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    width: 260px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 25px;
+    gap: 18px;
+    border-right: 1px solid #d7d7d7;
+}
+
+#menuLogo {
+    display: block;
+    width: 120px;
+    margin: 0 auto 35px;
+    object-fit: contain;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #3C3931;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.menuItem .menuIcon img,
+.menuItem .menuIcon i {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.4);
+    transition: 0.2s ease;
+}
+
+.menuItem.ativo {
+    color: #E7B21F;
+    font-weight: 600;
+}
+
+.menuItem.ativo .menuIcon img,
+.menuItem.ativo .menuIcon i {
+    filter: none;
+}
+
+.nav hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
+main {
+    padding: 40px;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 80px;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.coluna-esquerda {
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.coluna-direita {
+    flex: 1;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #F6F6F6;
+    border: 1px solid #3c393159;
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 3px 3px 1px rgba(60, 57, 49, 0.20);
+}
+
+.container-grafico {
+    min-height: 450px;
+}
+
+.funcionario-select {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #F0F0F0;
+}
+
+.grafico-legenda {
+    margin-bottom: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.dot {
+    width: 20px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.dot.trabalhado {
+    background-color: #2f2f2f;
+}
+
+.dot.devida {
+    background-color: #f6b800;
+}
+
+.chart-wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding-left: 10px;
+    position: relative;
+    margin-left: 30px;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 49px,
+        #ddd 50px
+    );
+}
+
+.y-axis {
+    position: absolute;
+    left: -35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+    bottom: -5px;
+}
+
+.chart-area {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+}
+
+.bar-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100px;
+}
+
+.bar-dark {
+    background-color: #2f2f2f;
+}
+
+.bar-yellow {
+    background-color: #f6b800;
+}
+
+.x-axis {
+    display: flex;
+    margin-left: 80px;
+    margin-top: 5px;
+    gap: 70px;
+    font-size: 11px;
+    color: #666;
+}
+
+.tabela1 {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #d7d7d7;
+    outline: 1px solid #3c393159;
+    text-align: center;
+}
+
+th {
+    background-color: #d7d7d7;
+    padding: 5px;
+}
+
+.topoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.botaoContainer {
+    background-color: #ECB922;
+    color: #3C3931;
+    border: 1px solid #3c393159;
+    border-radius: 3px;
+    padding: 10px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
